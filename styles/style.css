@@ -1,3 +1,8 @@
+@keyframes header__square-pic {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
 .page {
     min-width: 1100px;
     /* мы ещё не умеем делать мобильную версию сайта, */
@@ -17,6 +22,7 @@
     background-color: #F2F2F2;
     display: flex;
     position: relative;
+    overflow: hidden;
     /* выше установили ограничения для секции */
 }
 .logo_place_header {
@@ -64,6 +70,8 @@
     position: absolute;
     right: 0;
     top: 64px;
+    transform: rotate(-15deg);
+    animation: header__square-pic 20s linear infinite;
     
 }
 
@@ -75,7 +83,7 @@
 .two-columns {
     display: flex;
     margin-top: 100px;
-    margin-bottom: 100px;
+    
     width: 80%;
     justify-content: space-between;
     
@@ -124,7 +132,11 @@
         line-height: 69px;
         font-size: 60px;
         font-weight: bold;
+        
 
+    }
+    .technics .section-title {
+        line-height: 1.15;
     }
     .section-title__theme_dark {
         margin-top: 90px;
@@ -178,6 +190,52 @@
         margin-bottom: 0;
 
     }
+
+    .technics {
+        margin: 100px auto 0;
+        width: 80%;
+        
+    }
+
+    .cards {
+        width: 920px;
+        display: grid;
+        margin: 0 auto 0;
+        grid-template-columns: repeat(3, 240px); 
+        /* как не указывать точное значение ширины? */
+        grid-row-gap: 50px;
+        justify-content: space-between;
+        
+    }
+    .cards__item {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+
+    }
+    .cards__image {
+        height: 160px;
+        width: 160px;
+        border-radius: 100%;
+        margin: 0 40px 43px;
+
+    }
+    .cards__title {
+        line-height: 1.15;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        
+
+    }
+    .cards__discription {
+        line-height: 23px;
+        font-size: 18px;
+        font-weight: normal;
+        text-align: center;
+
+    }
+
 
     .feinman {
         height: 790px;
